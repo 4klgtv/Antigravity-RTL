@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شتاب فارسی (Persian Gravity) | راست‌چین و فونت وزیرمتن برای Antigravity</title>
+    <title>Persian Gravity (Antigravity-RTL) | راست‌چین و فونت وزیرمتن برای Antigravity</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,6 +63,29 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.5px;
+        }
+
+        /* Language Switcher Dropdown */
+        .lang-select-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .lang-select {
+            background: rgba(24, 24, 27, 0.8);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .lang-select:hover, .lang-select:focus {
+            border-color: var(--primary);
         }
 
         /* Main Container */
@@ -282,6 +305,15 @@
             text-decoration: none;
         }
 
+        /* LTR Alignment adjustments */
+        html[dir="ltr"] .step-list, html[dir="ltr"] .step-item {
+            text-align: left;
+        }
+        
+        html[dir="ltr"] .tribute-text {
+            text-align: left;
+        }
+
         /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -304,27 +336,37 @@
 
     <nav>
         <div class="logo">Persian Gravity 🚀</div>
-        <div>
-            <a href="https://github.com/m4tinbeigi-official/Antigravity-RTL" style="color: var(--text-main); text-decoration: none; font-weight: 700;">ریپازیتوری گیت‌هاب</a>
+        <div class="lang-select-container">
+            <select class="lang-select" id="langSelector">
+                <option value="fa">فارسی (FA)</option>
+                <option value="ar">العربية (AR)</option>
+                <option value="he">עברית (HE)</option>
+                <option value="en">English (EN)</option>
+            </select>
+            <a href="https://github.com/m4tinbeigi-official/Antigravity-RTL" style="color: var(--text-main); text-decoration: none; font-weight: 700;" data-fa="گیت‌هاب" data-ar="جيت هاب" data-he="גיטהאב" data-en="GitHub">گیت‌هاب</a>
         </div>
     </nav>
 
     <main>
         <header class="hero">
-            <h1>راست‌چین‌سازی و فونت زیبای فارسی برای ادیتورها</h1>
-            <p>پروژه شتاب فارسی ابزاری تک‌کلیک و کاملاً خودکار جهت فارسی‌سازی، راست‌چین‌سازی کامل رابط کاربری و اعمال فونت وزیرمتن روی نرم‌افزار هوش مصنوعی Antigravity و سایر ادیتورها است.</p>
-            <div style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--text-muted); display: flex; align-items: center; justify-content: center; gap: 0.5rem; direction: rtl;">
-                <span>🟢 تست شده و تایید شده روی:</span>
+            <h1 data-fa="راست‌چین‌سازی و فونت زیبای فارسی برای ادیتورها" data-ar="دعم الكتابة من اليمين إلى اليسار والخطوط الشرقية للمحررات" data-he="תמיכת RTL וגופן מותאם לעורכי קוד" data-en="RTL Support & Beautiful Typography for IDEs">راست‌چین‌سازی و فونت زیبای فارسی برای ادیتورها</h1>
+            <p data-fa="پروژه شتاب فارسی ابزاری تک‌کلیک و کاملاً خودکار جهت فارسی‌سازی، راست‌چین‌سازی کامل رابط کاربری و اعمال فونت وزیرمتن روی نرم‌افزار هوش مصنوعی Antigravity و سایر ادیتورها است." data-ar="مشروع جاذبية فارسي هو أداة بنقرة واحدة لتفعيل محاذاة RTL والخطوط الشرقية تلقائياً في محررات الأكواد وفي واجهة تطبيق Antigravity." data-he="פרויקט Persian Gravity הוא כלי אוטומטי המאפשר להחיל יישור RTL מלא וגופן מותאם לעברית ופרסית באפליקציית הפיתוח Antigravity ובעורכי קוד נוספים." data-en="Persian Gravity is a one-click automated tool that injects RTL layout and beautiful custom fonts into the Antigravity AI desktop app and other major IDEs.">پروژه شتاب فارسی ابزاری تک‌کلیک و کاملاً خودکار جهت فارسی‌سازی، راست‌چین‌سازی کامل رابط کاربری و اعمال فونت وزیرمتن روی نرم‌افزار هوش مصنوعی Antigravity و سایر ادیتورها است.</p>
+            <div style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--text-muted); display: flex; align-items: center; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+                <span data-fa="🟢 تست شده و تایید شده روی:" data-ar="🟢 تم الاختبار والتحقق على:" data-he="🟢 נבדק ואושר בגרסאות:" data-en="🟢 Tested and verified on:">🟢 تست شده و تایید شده روی:</span>
                 <code style="font-family: monospace; background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: #10b981; padding: 0.2rem 0.6rem;">macOS 15.7.3 (Sequoia)</code>
-                <span>و نرم‌افزار:</span>
+                <span data-fa="و نرم‌افزار:" data-ar="والبرنامج:" data-he="ואפליקציה:" data-en="& App:">و نرم‌افزار:</span>
                 <code style="font-family: monospace; background: rgba(99, 102, 241, 0.1); border-color: rgba(99, 102, 241, 0.3); color: #6366f1; padding: 0.2rem 0.6rem;">Antigravity v2.6.0</code>
             </div>
         </header>
 
         <section class="tribute-card">
-            <div class="tribute-title">🕯️ به یاد صابر راستی‌کردار</div>
-            <div class="tribute-text">
-                این پروژه و تمامی تلاش‌های ما در بستر وب فارسی، به روح پاک و خلاق زنده یاد <strong>صابر راستی‌کردار</strong> تقدیم می‌شود. صابر با خلق فونت‌های ماندگاری مانند وزیرمتن، شبنم، صمیم، ساحل و گندم، تحول شگرفی در زیبایی و خوانایی وب فارسی ایجاد کرد. او خالصانه و بدون چشم‌داشت هنر خود را به اشتراک گذاشت. یادش همیشه در تک‌تک پیکسل‌های متون فارسی ما جاری خواهد بود.
+            <div class="tribute-title" data-fa="🕯️ به یاد صابر راستی‌کردار" data-ar="🕯️ في ذكرى صابر راستي كردار" data-he="🕯️ לזכרו של סאבר ראסטי-קרדאר" data-en="🕯️ In Memory of Saber Rastikerdar">🕯️ به یاد صابر راستی‌کردار</div>
+            <div class="tribute-text" id="tributeText" 
+                 data-fa="این پروژه و تمامی تلاش‌های ما در بستر وب فارسی، به روح پاک و خلاق زنده یاد صابر راستی‌کردار تقدیم می‌شود. صابر با خلق فونت‌های ماندگاری مانند وزیرمتن، شبنم، صمیم، ساحل و گندم، تحول شگرفی در زیبایی و خوانایی وب فارسی ایجاد کرد. او خالصانه و بدون چشم‌داشت هنر خود را به اشتراک گذاشت. یادش همیشه در تک‌تک پیکسل‌های متون فارسی ما جاری خواهد بود." 
+                 data-ar="يُهدا هذا المشروع وجميع جهودنا لتطوير الويب الشرقي إلى الروح النقية والمبدعة للراحل صابر راستي كردار. لقد أحدث صابر تحولاً هائلاً في جمال وتنسيق الويب الشرقي من خلال خطوطه الرائعة مثل وزير متن، شبنم، صميم، وساحل. شارك فنه بكل إخلاص ومن دون مقابل، وستظل ذكراه حية في كل بكسل من نصوصنا." 
+                 data-he="פרויקט זה מוקדש לזכרו של סאבר ראסטי-קרדאר, יוצר הגופנים החופשיים Vazirmatn, Shabnam, Samim, ו-Sahel. סאבר חולל מהפכה של ממש בנגישות וביופי של שפות הכתיבה מימין לשמאל ברשת ובכלים הדיגיטליים. הוא שיתף את יצירותיו בחינם ובאהבה, וזכרו ימשיך ללוות אותנו בכל מילה ובכל שורת קוד." 
+                 data-en="This project and all our efforts are dedicated to the memory of Saber Rastikerdar, the creator of beautiful libre fonts like Vazirmatn, Shabnam, Samim, and Sahel. Saber revolutionized Eastern typography and readability across the web. He shared his art selflessly, and his memory will forever live on in every pixel of our text.">
+                 این پروژه و تمامی تلاش‌های ما در بستر وب فارسی، به روح پاک و خلاق زنده یاد صابر راستی‌کردار تقدیم می‌شود. صابر با خلق فونت‌های ماندگاری مانند وزیرمتن، شبنم، صمیم، ساحل و گندم، تحول شگرفی در زیبایی و خوانایی وب فارسی ایجاد کرد. او خالصانه و بدون چشم‌داشت هنر خود را به اشتراک گذاشت. یادش همیشه در تک‌تک پیکسل‌های متون فارسی ما جاری خواهد بود.
             </div>
         </section>
 
@@ -333,63 +375,63 @@
             <div class="card">
                 <div class="card-header">
                     <div class="card-icon"></div>
-                    <div class="card-title">دانلود نسخه macOS</div>
-                    <div class="card-desc">دانلود اسکریپت خودکار نصب فونت، راست‌چین‌سازی رابط کاربری Antigravity و پیکربندی ادیتورها مخصوص مک.</div>
+                    <div class="card-title" data-fa="دانلود نسخه macOS" data-ar="تحميل نسخة macOS" data-he="הורדה ל-macOS" data-en="Download macOS">دانلود نسخه macOS</div>
+                    <div class="card-desc" data-fa="دانلود اسکریپت خودکار نصب فونت، راست‌چین‌سازی رابط کاربری Antigravity و پیکربندی ادیتورها مخصوص مک." data-ar="تحميل سكربت التثبيت التلقائي للخطوط، محاذاة RTL لواجهة Antigravity وتعديل إعدادات محررات الأكواد لنظام الماك." data-he="הורדת סקריפט אוטומטי להתקנת הגופן, החלת תיקון ה-RTL והגדרת עורכי הקוד ב-Mac." data-en="Download the automated script for font installation, Antigravity UI patching, and IDE configuration on Mac.">دانلود اسکریپت خودکار نصب فونت، راست‌چین‌سازی رابط کاربری Antigravity و پیکربندی ادیتورها مخصوص مک.</div>
                 </div>
-                <a href="https://github.com/m4tinbeigi-official/Antigravity-RTL/raw/main/setup_vazirmatn.command" download class="btn btn-primary">دانلود اسکریپت مک (.command)</a>
+                <a href="https://github.com/m4tinbeigi-official/Antigravity-RTL/raw/main/setup_vazirmatn.command" download class="btn btn-primary" data-fa="دانلود اسکریپت مک (.command)" data-ar="تحميل سكربت الماك (.command)" data-he="הורד סקריפט ל-Mac (.command)" data-en="Download Mac Script (.command)">دانلود اسکریپت مک (.command)</a>
             </div>
 
             <!-- Windows Card -->
             <div class="card">
                 <div class="card-header">
                     <div class="card-icon">⊞</div>
-                    <div class="card-title">دانلود نسخه Windows</div>
-                    <div class="card-desc">دانلود اسکریپت PowerShell خودکار جهت دانلود، ثبت فونت در رجیستری و پچ ادیتورهای ویندوز.</div>
+                    <div class="card-title" data-fa="دانلود نسخه Windows" data-ar="تحميل نسخة Windows" data-he="הורדה ל-Windows" data-en="Download Windows">دانلود نسخه Windows</div>
+                    <div class="card-desc" data-fa="دانلود اسکریپت PowerShell خودکار جهت دانلود، ثبت فونت در رجیستری و پچ ادیتورهای ویندوز." data-ar="تحميل سكربت PowerShell لتنزيل الخطوط وتثبيتها بالرجستري وتعديل إعدادات محررات الأكواد على نظام ويندوز." data-he="הורדת סקריפט PowerShell להתקנה, רישום הגופן במערכת והגדרת עורכי הקוד ב-Windows." data-en="Download the automated PowerShell script for installation, font registry configuration, and IDE patching on Windows.">دانلود اسکریپت PowerShell خودکار جهت دانلود، ثبت فونت در رجیستری و پچ ادیتورهای ویندوز.</div>
                 </div>
-                <a href="https://github.com/m4tinbeigi-official/Antigravity-RTL/raw/main/setup_vazirmatn.ps1" download class="btn btn-primary">دانلود اسکریپت ویندوز (.ps1)</a>
+                <a href="https://github.com/m4tinbeigi-official/Antigravity-RTL/raw/main/setup_vazirmatn.ps1" download class="btn btn-primary" data-fa="دانلود اسکریپت ویندوز (.ps1)" data-ar="تحميل سكربت ويندوز (.ps1)" data-he="הורד סקריפט ל-Windows (.ps1)" data-en="Download Windows Script (.ps1)">دانلود اسکریپت ویندوز (.ps1)</a>
             </div>
 
             <!-- Linux Card -->
             <div class="card">
                 <div class="card-header">
                     <div class="card-icon">🐧</div>
-                    <div class="card-title">دانلود نسخه Linux</div>
-                    <div class="card-desc">دانلود اسکریپت پوسته (Shell Script) جهت بروزرسانی کش فونت‌های سیستم و اعمال پچ روی لینوکس.</div>
+                    <div class="card-title" data-fa="دانلود نسخه Linux" data-ar="تحميل نسخة Linux" data-he="הורדה ל-Linux" data-en="Download Linux">دانلود نسخه Linux</div>
+                    <div class="card-desc" data-fa="دانلود اسکریپت پوسته (Shell Script) جهت بروزرسانی کش فونت‌های سیستم و اعمال پچ روی لینوکس." data-ar="تحميل سكربت الشل لتحديث كاش الخطوط بالأنظمة وتطبيق الباتش وتعديل الإعدادات على نظام لينكس." data-he="הורדת סקריפט מעטפת (Shell) לעדכון זיכרון הגופנים של המערכת והחלת התיקון ב-Linux." data-en="Download the shell script for font cache rebuild, application patching, and configuration on Linux.">دانلود اسکریپت پوسته (Shell Script) جهت بروزرسانی کش فونت‌های سیستم و اعمال پچ روی لینوکس.</div>
                 </div>
-                <a href="https://github.com/m4tinbeigi-official/Antigravity-RTL/raw/main/setup_vazirmatn_linux.sh" download class="btn btn-primary">دانلود اسکریپت لینوکس (.sh)</a>
+                <a href="https://github.com/m4tinbeigi-official/Antigravity-RTL/raw/main/setup_vazirmatn_linux.sh" download class="btn btn-primary" data-fa="دانلود اسکریپت لینوکس (.sh)" data-ar="تحميل سكربت لينكس (.sh)" data-he="הורד סקריפט ל-Linux (.sh)" data-en="Download Linux Script (.sh)">دانلود اسکریپت لینوکس (.sh)</a>
             </div>
         </section>
 
         <section class="instructions">
-            <h2>📖 نحوه استفاده و اجرا</h2>
+            <h2 data-fa="📖 نحوه استفاده و اجرا" data-ar="📖 طريقة الاستخدام والتشغيل" data-he="📖 הוראות שימוש והפעלה" data-en="📖 Instructions & Usage">📖 نحوه استفاده و اجرا</h2>
             <ul class="step-list">
                 <li class="step-item">
                     <div class="step-num">۱</div>
-                    <div class="step-content">فایل مربوط به سیستم‌عامل خود را از دکمه‌های بالا دانلود کنید.</div>
+                    <div class="step-content" data-fa="فایل مربوط به سیستم‌عامل خود را از دکمه‌های بالا دانلود کنید." data-ar="قم بتحميل الملف المخصص لنظام التشغيل الخاص بك من الأزرار أعلاه." data-he="הורד את הקובץ המתאים למערכת ההפעלה שלך מהכפתורים למעלה." data-en="Download the script matching your operating system from the links above.">فایل مربوط به سیستم‌عامل خود را از دکمه‌های بالا دانلود کنید.</div>
                 </li>
                 <li class="step-item">
                     <div class="step-num">۲</div>
-                    <div class="step-content"><strong>در سیستم‌عامل مک (macOS):</strong> روی فایل <code>setup_vazirmatn.command</code> راست کلیک کرده و Open را بزنید یا با زدن دستور <code>chmod +x setup_vazirmatn.command</code> در ترمینال آن را اجرایی کنید و سپس با دوبار کلیک آن را اجرا کنید.</div>
+                    <div class="step-content" data-fa="در سیستم‌عامل مک (macOS): روی فایل setup_vazirmatn.command راست کلیک کرده و Open را بزنید یا با زدن دستور chmod +x setup_vazirmatn.command در ترمینال آن را اجرایی کنید و سپس با دوبار کلیک آن را اجرا کنید." data-ar="على نظام الماك (macOS): اضغط بزر الفأرة الأيمن على ملف setup_vazirmatn.command واختر Open، أو قم بتشغيل chmod +x setup_vazirmatn.command بالترمينال ثم اضغط مرتين للتشغيل." data-he="במערכת macOS: לחץ לחיצה ימנית על קובץ setup_vazirmatn.command ובחר Open, או הפעל את הפקודה chmod +x setup_vazirmatn.command בטרמינל להרשאת הפעלה, ואז הרץ בדאבל-קליק." data-en="On macOS: Right-click setup_vazirmatn.command and choose Open, or run chmod +x setup_vazirmatn.command in Terminal to make it executable, then double-click to run.">در سیستم‌عامل مک (macOS): روی فایل setup_vazirmatn.command راست کلیک کرده و Open را بزنید یا با زدن دستور chmod +x setup_vazirmatn.command در ترمینال آن را اجرایی کنید و سپس با دوبار کلیک آن را اجرا کنید.</div>
                 </li>
                 <li class="step-item">
                     <div class="step-num">۳</div>
-                    <div class="step-content"><strong>در ویندوز (Windows):</strong> روی فایل <code>setup_vazirmatn.ps1</code> راست کلیک کرده و گزینه Run with PowerShell را انتخاب کنید.</div>
+                    <div class="step-content" data-fa="در ویندوز (Windows): روی فایل setup_vazirmatn.ps1 راست کلیک کرده و گزینه Run with PowerShell را انتخاب کنید." data-ar="على نظام ويندوز (Windows): اضغط بزر الفأرة الأيمن على ملف setup_vazirmatn.ps1 واختر Run with PowerShell." data-he="במערכת Windows: לחץ לחיצה ימנית על קובץ setup_vazirmatn.ps1 ובחר באפשרות Run with PowerShell." data-en="On Windows: Right-click setup_vazirmatn.ps1 and select Run with PowerShell.">در ویندوز (Windows): روی فایل setup_vazirmatn.ps1 راست کلیک کرده و گزینه Run with PowerShell را انتخاب کنید.</div>
                 </li>
                 <li class="step-item">
                     <div class="step-num">۴</div>
-                    <div class="step-content"><strong>در لینوکس (Linux):</strong> در ترمینال دستور <code>chmod +x setup_vazirmatn_linux.sh</code> را بزنید و سپس آن را با دستور <code>./setup_vazirmatn_linux.sh</code> اجرا کنید.</div>
+                    <div class="step-content" data-fa="در لینوکس (Linux): در ترمینال دستور chmod +x setup_vazirmatn_linux.sh را بزنید و سپس آن را با دستور ./setup_vazirmatn_linux.sh اجرا کنید." data-ar="على نظام لينكس (Linux): بالترمينال قم بتشغيل chmod +x setup_vazirmatn_linux.sh ثم قم بتشغيلها بالامر ./setup_vazirmatn_linux.sh" data-he="במערכת Linux: הרץ בטרמינל את הפקודה chmod +x setup_vazirmatn_linux.sh ואז הפעל באמצעות ./setup_vazirmatn_linux.sh" data-en="On Linux: Run chmod +x setup_vazirmatn_linux.sh in your terminal, then execute it with ./setup_vazirmatn_linux.sh">در لینوکس (Linux): در ترمینال دستور chmod +x setup_vazirmatn_linux.sh را بزنید و سپس آن را با دستور ./setup_vazirmatn_linux.sh اجرا کنید.</div>
                 </li>
                 <li class="step-item">
                     <div class="step-num">۵</div>
-                    <div class="step-content">پس از پایان کار، برنامه Antigravity یا ادیتور خود را ببندید و مجدداً باز کنید تا تغییرات را مشاهده کنید.</div>
+                    <div class="step-content" data-fa="پس از پایان کار، برنامه Antigravity یا ادیتور خود را ببندید و مجدداً باز کنید تا تغییرات را مشاهده کنید." data-ar="بعد الانتهاء، قم بإغلاق تطبيق Antigravity أو محررات الأكواد وإعادة فتحها لتشاهد التغييرات." data-he="לאחר סיום ההתקנה, סגור את אפליקציית Antigravity או עורכי הקוד והפעל אותם מחדש לצפייה בשינויים." data-en="Once finished, fully close Antigravity or your IDE and reopen it to apply the changes.">پس از پایان کار، برنامه Antigravity یا ادیتور خود را ببندید و مجدداً باز کنید تا تغییرات را مشاهده کنید.</div>
                 </li>
             </ul>
         </section>
 
         <section class="card" style="margin-bottom: 4rem; width: 100%;">
             <div class="card-header">
-                <div class="card-title">🔗 پروژه‌های مرتبط</div>
-                <p class="card-desc" style="margin-top: 0.5rem; line-height: 1.7;">
+                <div class="card-title" data-fa="🔗 پروژه‌های مرتبط" data-ar="🔗 مشاريع ذات صلة" data-he="🔗 פרויקטים קשורים" data-en="🔗 Related Projects">🔗 پروژه‌های مرتبط</div>
+                <p class="card-desc" style="margin-top: 0.5rem; line-height: 1.7;" data-fa="اگر از برنامه‌های هوش مصنوعی دیگر نیز استفاده می‌کنید، پروژه‌های زیر را نیز بررسی کنید:<br><br>• پروژه claude-rtl-patcher: ابزاری هوشمند برای راست‌چین‌سازی کامل رابط کاربری نرم‌افزار رسمی دسکتاپ Claude." data-ar="إذا كنت تستخدم تطبيقات الذكاء الاصطناعي الأخرى، فقد يهمك المشروع التالي:<br><br>• مشروع claude-rtl-patcher: أداة ذكية لمحاذاة ودعم اليمين إلى اليسار (RTL) لتطبيق ديسكتوب Claude الرسمي." data-he="אם אתם משתמשים באפליקציות בינה מלאכותית אחרות, מומלץ לבדוק גם את הפרויקטים הבאים:<br><br>• פרויקט claude-rtl-patcher: כלי חכם ליישור מימין לשמאל (RTL) באפליקציית Claude Desktop הרשמית." data-en="If you use other AI desktop applications, check out these related projects:<br><br>• claude-rtl-patcher: A smart auto-patcher for RTL and Vazirmatn font support in the official Claude Desktop client.">
                     اگر از برنامه‌های هوش مصنوعی دیگر نیز استفاده می‌کنید، پروژه‌های زیر را نیز بررسی کنید:
                     <br><br>
                     • <strong><a href="https://github.com/m4tinbeigi-official/claude-rtl-patcher" target="_blank" style="color: var(--primary); text-decoration: none;">پروژه claude-rtl-patcher</a></strong>: ابزاری هوشمند برای راست‌چین‌سازی کامل رابط کاربری نرم‌افزار رسمی دسکتاپ Claude.
@@ -399,8 +441,49 @@
     </main>
 
     <footer>
-        <p>توسعه یافته به یاد صابر راستی‌کردار | ارائه شده در ریپازیتوری <a href="https://github.com/m4tinbeigi-official/Antigravity-RTL">Antigravity-RTL</a></p>
+        <p data-fa="توسعه یافته به یاد صابر راستی‌کردار | ارائه شده در ریپازیتوری Antigravity-RTL" data-ar="تم التطوير في ذكرى صابر راستي كردار | مقدم في مستودع Antigravity-RTL" data-he="פותח לזכרו של סאבר ראסטי-קרדאר | זמין במאגר השורות Antigravity-RTL" data-en="Developed in memory of Saber Rastikerdar | Available on Antigravity-RTL Repository">توسعه یافته به یاد صابر راستی‌کردار | ارائه شده در ریپازیتوری <a href="https://github.com/m4tinbeigi-official/Antigravity-RTL">Antigravity-RTL</a></p>
     </footer>
 
+    <script>
+        const selector = document.getElementById('langSelector');
+        
+        function setLanguage(lang) {
+            // Update html direction and language attributes
+            const dir = (lang === 'en') ? 'ltr' : 'rtl';
+            document.documentElement.setAttribute('dir', dir);
+            document.documentElement.setAttribute('lang', lang);
+            
+            // Translate all elements with data attributes
+            const elements = document.querySelectorAll('[data-fa], [data-ar], [data-he], [data-en]');
+            elements.forEach(el => {
+                const text = el.getAttribute('data-' + lang);
+                if (text) {
+                    // Preserving anchors inside paragraphs if any (like Related Projects)
+                    if (el.id === 'tributeText') {
+                        el.textContent = text;
+                    } else if (el.classList.contains('card-desc') && el.innerHTML.includes('href')) {
+                        // Don't overwrite the structured HTML, just replace the descriptive text around it
+                        // Or we can dynamically translate using text node replacement, but simple text content is safer for most
+                        el.innerHTML = text;
+                    } else {
+                        el.textContent = text;
+                    }
+                }
+            });
+        }
+
+        selector.addEventListener('change', (e) => {
+            setLanguage(e.target.value);
+        });
+
+        // Set default based on browser language if applicable, else Persian
+        const browserLang = navigator.language.split('-')[0];
+        if (['ar', 'he', 'en'].includes(browserLang)) {
+            selector.value = browserLang;
+            setLanguage(browserLang);
+        } else {
+            setLanguage('fa');
+        }
+    </script>
 </body>
 </html>
