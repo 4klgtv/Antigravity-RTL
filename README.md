@@ -19,3 +19,8 @@
 ## 🚀 راهنمای اجرا و راه‌اندازی (یک کلیک)
 برای نصب فونت و پچ کردن نرم‌افزار روی هر سیستم مک، کافیست روی فایل زیر کلیک کنید:
 * **[`setup_vazirmatn.command`](./setup_vazirmatn.command)**
+
+---
+
+## 🔗 پروژه‌های مرتبط
+- **[claude-rtl-patcher](https://github.com/m4tinbeigi-official/claude-rtl-patcher)**: ابزار مشابه برای راست‌چین‌سازی کامل رابط کاربری نرم‌افزار رسمی دسکتاپ Claude.
