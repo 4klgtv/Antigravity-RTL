@@ -34,5 +34,16 @@ To install the font and apply the patch automatically:
 
 ---
 
+## 📣 Demand Native RTL Support from Google
+
+To make this patch obsolete and encourage Google to support RTL languages (Persian, Arabic, Hebrew) and quality fonts natively in Antigravity:
+
+1. **Email the Team**: Copy the pre-written template in [feedback_report.md](file:///Users/ricksabchez/.gemini/antigravity/brain/045f627c-9f65-46e2-af2f-99ba6175b49d/feedback_report.md) and send it to `antigravity-support@google.com`.
+2. **In-App Feedback**: Open Antigravity, press `Cmd + ,` (Mac) or `Ctrl + ,` (Windows/Linux), click **Feedback**, and paste the message template.
+
+Let's make RTL development a first-class citizen! 🚀
+
+---
+
 ## 🔗 Related Projects
 - **[claude-rtl-patcher](https://github.com/m4tinbeigi-official/claude-rtl-patcher)**: A similar tool to patch the official Claude Desktop app for RTL and Vazirmatn support.

@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Persian Gravity (Antigravity-RTL) | راست‌چین و فونت وزیرمتن برای Antigravity</title>
+    <meta name="description" content="پروژه شتاب فارسی (Persian Gravity) - راست‌چین‌سازی هوشمند و اعمال فونت وزیرمتن در محیط نرم‌افزار هوش مصنوعی Antigravity و سایر ادیتورها.">
+    <meta name="keywords" content="Antigravity, RTL, Vazirmatn, Persian, Arabic, Hebrew, Google Antigravity, راست‌چین, وزیرمتن">
+    <meta property="og:title" content="Persian Gravity (Antigravity-RTL) | راست‌چین و فونت وزیرمتن برای Antigravity">
+    <meta property="og:description" content="راست‌چین‌سازی هوشمند و اعمال فونت وزیرمتن در محیط نرم‌افزار Antigravity.">
+    <meta property="og:image" content="./assets/preview.png">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://m4tinbeigi-official.github.io/Antigravity-RTL/">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -445,6 +452,55 @@
                 </p>
             </div>
         </section>
+
+        <section class="card" style="margin-bottom: 4rem; width: 100%; border: 1px solid rgba(99, 102, 241, 0.4); background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(24, 24, 27, 0.7) 100%);">
+            <div class="card-header" style="text-align: center;">
+                <div class="card-title" style="font-size: 1.6rem; color: #a855f7; display: flex; align-items: center; justify-content: center; gap: 0.5rem;"
+                     data-fa="📣 درخواست پشتیبانی بومی از گوگل"
+                     data-ar="📣 طلب دعم بومي من جوجل"
+                     data-he="📣 בקשת תמיכה מובנית מגוגל"
+                     data-en="📣 Request Native RTL Support from Google">📣 درخواست پشتیبانی بومی از گوگل</div>
+                <p class="card-desc" style="margin-top: 0.75rem; margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;"
+                   data-fa="برای اینکه در آپدیت‌های بعدی نرم‌افزار Antigravity نیازی به استفاده از پچ‌های جانبی نباشد، به ما ملحق شوید و درخواست را مستقیماً به گوگل بفرستید."
+                   data-ar="ساعد في جعل هذا الباتش غير ضروري من خلال مطالبة جوجل بإضافة دعم مدمج للكتابة من اليمين إلى اليسار وخط وزير متن."
+                   data-he="עזרו להפוך את התיקון הזה למיותר על ידי בקשה מגוגל להוסיף תמיכת RTL מובנית וגופן Vazirmatn."
+                   data-en="Help make this patch obsolete by asking Google to add built-in RTL and Vazirmatn font support natively.">
+                   برای اینکه در آپدیت‌های بعدی نرم‌افزار Antigravity نیازی به استفاده از پچ‌های جانبی نباشد، به ما ملحق شوید و درخواست را مستقیماً به گوگل بفرستید.
+                </p>
+            </div>
+            
+            <div style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 1.5rem; text-align: center;">
+                <h3 style="margin-bottom: 0.75rem;" data-fa="گام اول: کپی پیش‌نویس آماده" data-ar="الخطوة الأولى: نسخ المسودة الجاهزة" data-he="שלב 1: העתקת הטיוטה המוכנה" data-en="Step 1: Copy Pre-written Template">گام اول: کپی پیش‌نویس آماده</h3>
+                <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1rem;"
+                   data-fa="متن ایمیل پیشنهادی (به زبان انگلیسی برای بررسی سریع‌تر توسط تیم گوگل):"
+                   data-ar="نص البريد الإلكتروني المقترح (باللغة الإنجليزية لمراجعة أسرع من قبل فريق جوجل):"
+                   data-he="טקסט המייל המוצע (באנגלית לבדיקה מהירה יותר על ידי צוות גוגل):"
+                   data-en="The suggested email template (written in English for faster review by the Google team):">
+                   متن ایمیل پیشنهادی (به زبان انگلیسی برای بررسی سریع‌تر توسط تیم گوگل):
+                </p>
+                <button class="btn btn-primary" id="copyBtn" onclick="copyTemplate()" style="margin: 0 auto; display: inline-flex; width: auto; min-width: 200px; gap: 0.5rem; justify-content: center; align-items: center;"
+                        data-fa="📝 کپی متن پیش‌نویس"
+                        data-ar="📝 نسخ مسودة البريد"
+                        data-he="📝 העתק טקסט טיוטה"
+                        data-en="📝 Copy Email Template">📝 کپی متن پیش‌نویس</button>
+                <div id="copyToast" style="text-align: center; color: #10b981; margin-top: 0.75rem; font-size: 0.9rem; font-weight: 700; opacity: 0; transition: opacity 0.3s; display: none;"
+                     data-fa="✓ متن کپی شد!"
+                     data-ar="✓ تم نسخ النص!"
+                     data-he="✓ הטקסט הועתק!"
+                     data-en="✓ Template Copied!">✓ متن کپی شد!</div>
+            </div>
+
+            <div style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);" id="step2Card">
+                <h3 style="margin-bottom: 0.75rem;" data-fa="گام دوم: ارسال به گوگل" data-ar="الخطوة الثانية: الإرسال إلى جوجل" data-he="שלב 2: שליחה לגוגל" data-en="Step 2: Send to Google">گام دوم: ارسال به گوگل</h3>
+                <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted);"
+                   data-fa="یک ایمیل به نشانی <strong>antigravity-support@google.com</strong> ارسال کرده و یا در محیط نرم‌افزار با زدن <code>Cmd + ,</code> (مک) یا <code>Ctrl + ,</code> (ویندوز) و کلیک بر روی دکمه <strong>Feedback</strong> درخواست خود را ثبت کنید."
+                   data-ar="أرسل بريداً إلكترونياً إلى <strong>antigravity-support@google.com</strong> أو اضغط <code>Cmd + ,</code> (ماك) أو <code>Ctrl + ,</code> (ويندوز) داخل البرنامج وانقر على <strong>Feedback</strong> لإرسال مسودتك."
+                   data-he="שלח מייל לכתובת <strong>antigravity-support@google.com</strong> או לחץ על <code>Cmd + ,</code> (Mac) או <code>Ctrl + ,</code> (Windows) בתוך האפליקציה ולחץ על <strong>Feedback</strong> כדי להגיש את הבקשה."
+                   data-en="Send an email to <strong>antigravity-support@google.com</strong> or press <code>Cmd + ,</code> (Mac) or <code>Ctrl + ,</code> (Windows) inside the application and click <strong>Feedback</strong> to submit your request.">
+                   یک ایمیل به نشانی <strong>antigravity-support@google.com</strong> ارسال کرده و یا در محیط نرم‌افزار با زدن <code>Cmd + ,</code> (مک) یا <code>Ctrl + ,</code> (ویندوز) و کلیک بر روی دکمه <strong>Feedback</strong> درخواست خود را ثبت کنید.
+                </p>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -482,6 +538,37 @@
         selector.addEventListener('change', (e) => {
             setLanguage(e.target.value);
         });
+
+        function copyTemplate() {
+            const templateText = `Dear Antigravity Development Team,
+
+I am writing to request a feature that would greatly improve the user experience for millions of developers writing in Right-to-Left (RTL) languages such as Persian, Arabic, and Hebrew.
+
+Currently, the Antigravity desktop application and IDE extensions do not natively render RTL text correctly in markdown artifacts, chat panels, or logs. To work around this, we have built a custom patcher (Antigravity-RTL) to inject CSS styling (using the Vazirmatn font) and force RTL directionality.
+
+We request that Antigravity natively supports:
+1. Auto-Detection of RTL Content: Detect Persian, Arabic, and Hebrew Unicode ranges and automatically apply "direction: rtl" and "text-align: right" to those text blocks in markdown rendering, chat interfaces, and artifacts.
+2. Beautiful RTL Fonts: Bundle or support standard high-quality open-source RTL fonts like Vazirmatn to ensure premium typography out of the box.
+
+Integrating this natively in the next release of Antigravity would eliminate the need for third-party patching tools and provide a seamless, premium experience for RTL developers globally.
+
+Thank you for your dedication to building an inclusive and powerful AI-first development platform.
+
+Best regards,`;
+            
+            navigator.clipboard.writeText(templateText).then(() => {
+                const toast = document.getElementById('copyToast');
+                const lang = selector.value || 'fa';
+                toast.style.display = 'block';
+                setTimeout(() => { toast.style.opacity = '1'; }, 10);
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    setTimeout(() => { toast.style.display = 'none'; }, 300);
+                }, 2500);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
 
         // Set default based on browser language if applicable, else Persian
         const browserLang = navigator.language.split('-')[0];
