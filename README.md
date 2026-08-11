@@ -4,6 +4,8 @@ Smart Right-to-Left (RTL) alignment and custom font patcher for the Antigravity 
 
 > 🟢 **Tested and verified on:** `macOS 15.7.3 (Sequoia)` & `Antigravity v2.6.0` (with full success)
 
+![Antigravity RTL Preview](./assets/preview.png)
+
 ---
 
 ### **In Memory of Saber Rastikerdar 🕯️**

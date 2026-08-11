@@ -4,6 +4,8 @@
 
 > 🟢 **تم الاختبار والتحقق على:** `macOS 15.7.3 (Sequoia)` و `Antigravity v2.6.0` (بنجاح كامل)
 
+![Antigravity RTL Preview](./assets/preview.png)
+
 ---
 
 ### **في ذكرى صابر راستي كردار 🕯️**

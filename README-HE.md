@@ -4,6 +4,8 @@
 
 > 🟢 **נבדק ואושר בגרסאות:** `macOS 15.7.3 (Sequoia)` ו-`Antigravity v2.6.0` (בהצלחה מלאה)
 
+![Antigravity RTL Preview](./assets/preview.png)
+
 ---
 
 ### **לזכרו של סאבר ראסטי-קרדאר 🕯️**

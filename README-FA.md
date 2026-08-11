@@ -4,6 +4,8 @@
 
 > 🟢 **تست شده و تأیید شده روی:** `macOS 15.7.3 (Sequoia)` و نرم‌افزار `Antigravity v2.6.0` (با موفقیت کامل)
 
+![Antigravity RTL Preview](./assets/preview.png)
+
 ---
 
 ### **به یاد صابر راستی‌کردار 🕯️**
