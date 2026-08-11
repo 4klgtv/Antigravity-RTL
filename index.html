@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شتاب فارسی (Persian Gravity) | راست‌چین و فونت وزیرمتن برای Antigravity</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Vazirmatn:wght@200;400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-glow: rgba(99, 102, 241, 0.5);
+            --bg-dark: #09090b;
+            --card-bg: rgba(24, 24, 27, 0.7);
+            --border-color: rgba(63, 63, 70, 0.4);
+            --text-main: #f4f4f5;
+            --text-muted: #a1a1aa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.1) 0%, transparent 40%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Glassmorphism Navigation */
+        nav {
+            backdrop-filter: blur(12px);
+            background: rgba(9, 9, 11, 0.5);
+            border-bottom: 1px solid var(--border-color);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            background: linear-gradient(to left, #6366f1, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        /* Main Container */
+        main {
+            max-width: 1100px;
+            margin: 120px auto 40px auto;
+            padding: 0 2rem;
+            flex-grow: 1;
+        }
+
+        /* Header Hero */
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Saber Tribute Card */
+        .tribute-card {
+            background: linear-gradient(135deg, rgba(24, 24, 27, 0.8) 0%, rgba(9, 9, 11, 0.9) 100%);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(168, 85, 247, 0.1);
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .tribute-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .tribute-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #a855f7;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tribute-text {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #e4e4e7;
+            text-align: justify;
+        }
+
+        /* Download Section */
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.15);
+        }
+
+        .card-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 1.5rem;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 4px 15px var(--primary-glow);
+        }
+
+        .btn-primary:hover {
+            background: #4f46e5;
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+        }
+
+        /* Instructions Section */
+        .instructions {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .instructions h2 {
+            font-size: 1.75rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .step-num {
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--primary);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .step-content {
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-family: monospace;
+            direction: ltr;
+            display: inline-block;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            main { margin-top: 100px; padding: 0 1rem; }
+            .tribute-card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Persian Gravity 🚀</div>
+        <div>
+            <a href="https://github.com/m4tinbeigi-official/Antigravity-RTL" style="color: var(--text-main); text-decoration: none; font-weight: 700;">ریپازیتوری گیت‌هاب</a>
+        </div>
+    </nav>
+
+    <main>
+        <header class="hero">
+            <h1>راست‌چین‌سازی و فونت زیبای فارسی برای ادیتورها</h1>
+            <p>پروژه شتاب فارسی ابزاری تک‌کلیک و کاملاً خودکار جهت فارسی‌سازی، راست‌چین‌سازی کامل رابط کاربری و اعمال فونت وزیرمتن روی نرم‌افزار هوش مصنوعی Antigravity و سایر ادیتورها است.</p>
+        </header>
+
+        <section class="tribute-card">
+            <div class="tribute-title">🕯️ به یاد صابر راستی‌کردار</div>
+            <div class="tribute-text">
+                این پروژه و تمامی تلاش‌های ما در بستر وب فارسی، به روح پاک و خلاق زنده یاد <strong>صابر راستی‌کردار</strong> تقدیم می‌شود. صابر با خلق فونت‌های ماندگاری مانند وزیرمتن، شبنم، صمیم، ساحل و گندم، تحول شگرفی در زیبایی و خوانایی وب فارسی ایجاد کرد. او خالصانه و بدون چشم‌داشت هنر خود را به اشتراک گذاشت. یادش همیشه در تک‌تک پیکسل‌های متون فارسی ما جاری خواهد بود.
+            </div>
+        </section>
+
+        <section class="download-grid">
+            <!-- macOS Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon"></div>
+                    <div class="card-title">دانلود نسخه macOS</div>
+                    <div class="card-desc">دانلود اسکریپت خودکار نصب فونت، راست‌چین‌سازی رابط کاربری Antigravity و پیکربندی ادیتورها مخصوص مک.</div>
+                </div>
+                <a href="https://github.com/m4tinbeigi-official/Antigravity-RTL/raw/main/setup_vazirmatn.command" download class="btn btn-primary">دانلود اسکریپت مک (.command)</a>
+            </div>
+
+            <!-- Windows Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">⊞</div>
+                    <div class="card-title">دانلود نسخه Windows</div>
+                    <div class="card-desc">دانلود اسکریپت PowerShell خودکار جهت دانلود، ثبت فونت در رجیستری و پچ ادیتورهای ویندوز.</div>
+                </div>
+                <a href="https://github.com/m4tinbeigi-official/Antigravity-RTL/raw/main/setup_vazirmatn.ps1" download class="btn btn-primary">دانلود اسکریپت ویندوز (.ps1)</a>
+            </div>
+
+            <!-- Linux Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🐧</div>
+                    <div class="card-title">دانلود نسخه Linux</div>
+                    <div class="card-desc">دانلود اسکریپت پوسته (Shell Script) جهت بروزرسانی کش فونت‌های سیستم و اعمال پچ روی لینوکس.</div>
+                </div>
+                <a href="https://github.com/m4tinbeigi-official/Antigravity-RTL/raw/main/setup_vazirmatn_linux.sh" download class="btn btn-primary">دانلود اسکریپت لینوکس (.sh)</a>
+            </div>
+        </section>
+
+        <section class="instructions">
+            <h2>📖 نحوه استفاده و اجرا</h2>
+            <ul class="step-list">
+                <li class="step-item">
+                    <div class="step-num">۱</div>
+                    <div class="step-content">فایل مربوط به سیستم‌عامل خود را از دکمه‌های بالا دانلود کنید.</div>
+                </li>
+                <li class="step-item">
+                    <div class="step-num">۲</div>
+                    <div class="step-content"><strong>در سیستم‌عامل مک (macOS):</strong> روی فایل <code>setup_vazirmatn.command</code> راست کلیک کرده و Open را بزنید یا با زدن دستور <code>chmod +x setup_vazirmatn.command</code> در ترمینال آن را اجرایی کنید و سپس با دوبار کلیک آن را اجرا کنید.</div>
+                </li>
+                <li class="step-item">
+                    <div class="step-num">۳</div>
+                    <div class="step-content"><strong>در ویندوز (Windows):</strong> روی فایل <code>setup_vazirmatn.ps1</code> راست کلیک کرده و گزینه Run with PowerShell را انتخاب کنید.</div>
+                </li>
+                <li class="step-item">
+                    <div class="step-num">۴</div>
+                    <div class="step-content"><strong>در لینوکس (Linux):</strong> در ترمینال دستور <code>chmod +x setup_vazirmatn_linux.sh</code> را بزنید و سپس آن را با دستور <code>./setup_vazirmatn_linux.sh</code> اجرا کنید.</div>
+                </li>
+                <li class="step-item">
+                    <div class="step-num">۵</div>
+                    <div class="step-content">پس از پایان کار، برنامه Antigravity یا ادیتور خود را ببندید و مجدداً باز کنید تا تغییرات را مشاهده کنید.</div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>توسعه یافته به یاد صابر راستی‌کردار | ارائه شده در ریپازیتوری <a href="https://github.com/m4tinbeigi-official/Antigravity-RTL">Antigravity-RTL</a></p>
+    </footer>
+
+</body>
+</html>
